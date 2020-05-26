@@ -8,89 +8,23 @@
   <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  <!-- 盤面 -->
-  <table id="field">
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>◯</td>
-      <td>●</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>●</td>
-      <td>◯</td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </table>
+
+  <div style="display: none;">
+    <div id="cell">
+      <div class="cells"></div>
+    </div>
+    <div id="white">
+      <div class="stone" style="color: white;">●</div>
+    </div>
+    <div id="black">
+      <div class="stone">●</div>
+    </div>
+  </div>
+
+  <div class="contents">
+    <div id="message"></div>
+    <div id="board"></div>
+  </div>
 
   <script src="javascripts/index.js"></script>
 </body>
