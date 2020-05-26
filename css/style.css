@@ -1,19 +1,40 @@
 
-#field {
-  position:absolute;
-  top: 40%;
-  left: 35%;
-  margin-top: -250px;
-  margin-left: -100px;
+#cell,
+#white,
+#black {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  cursor: pointer;
 }
 
-#field td {
-  border: 3px solid black;
-  width: 80px;
-  height: 80px;
-  background-color: green;
-  vertical-align: middle;
+.cells {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #00ee00;
+}
+
+.stone {
+  font-size: 50px;
+  background-color: #00ee00;
+}
+
+.contents {
+  width: 100%;
+  height: 100%;
+}
+
+#board {
+  position: relative;
+  margin: 0 25%;
+}
+
+#message {
+  margin-top: 150px;
+  margin-bottom: 10px;
   text-align: center;
-  font-size: 3.8vw;
-  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
 }
