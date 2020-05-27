@@ -95,7 +95,9 @@
     document.getElementById("message").innerHTML = message;
     showBoard();
   }
+
   var piece;
+  
   // boardを表示
   var showBoard = function() {
     var b = document.getElementById("board");
