@@ -19,6 +19,7 @@
         // 自分自身の色であればという条件
         if(n > 0 && board[nx][ny] == turn) {
           ret += n;
+          // ひっくり返す処理
           if(flip) {
             nx = x + dx; ny = y + dy;
             while(board[nx][ny] == 3 - turn) {
@@ -56,7 +57,7 @@
     var message = ((turn == 1)?"黒":"白");
     for(var x = 1; x <= 8; x++) {
       for (var y = 1; y <= 8; y++) {
-        // パスの条件式(物が置ける状態で置けなかったら)
+        // パスの条件式(物が置ける状態で置けるかどうか)
         if(board[x][y] == 0 && checkReverse(x, y, false)) {
           document.getElementById("message").innerHTML = message + "の番です";
           showBoard();
@@ -67,7 +68,7 @@
     }
     turn = 3 - turn;
     message += "パス<br>"; + ((turn == 1) ? "黒" : "白") + "の番です";
-    
+
     for (var x = 1; x <= 8; x++) {
       for (var y = 1; y <= 8; y++) {
         if (board[x][y] == 0 && checkReverse(x, y, false)) {
@@ -98,13 +99,12 @@
   }
 
   var piece;
-
   // boardを表示
   var showBoard = function() {
     var b = document.getElementById("board");
     // 番兵があるから1からスタート
-    for(var y = 1; y <= 8; y++) {
-      for(var x = 1; x <= 8; x++) {
+    for(var x = 1; x <= 8; x++) {
+      for(var y = 1; y <= 8; y++) {
         var c = piece[board[x][y]].cloneNode(true);
         c.style.left = ((x - 1) * 50) + "px";
         c.style.top = ((y - 1) * 50) + "px";
@@ -136,7 +136,7 @@
       // iに配列を代入
       board[i] = [];
       for(var j = 0; j < 10; j++) {
-        // 特定の場所を取得できるようにする
+        // 配列[i]番目の[j]番目に0を代入、特定の場所を取得、代入できるようにしている。
         board[i][j] = 0;
       }
     }
