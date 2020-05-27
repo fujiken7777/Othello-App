@@ -12,7 +12,7 @@
         // 再帰
         if(dx == 0 && dy == 0) { continue; }
         var nx = x + dx, ny = y + dy, n = 0;
-        // 黒なら黒白なら白で繰り返す
+        // 黒なら黒、白なら白で繰り返す
         while(board[nx][ny] == 3 - turn) {
           n++; nx += dx; ny += dy;
         }
@@ -99,7 +99,7 @@
   // boardを表示
   var showBoard = function() {
     var b = document.getElementById("board");
-    // 番兵があるかr1からスタート
+    // 番兵があるから1からスタート
     for(var y = 1; y <= 8; y++) {
       for(var x = 1; x <= 8; x++) {
         var c = piece[board[x][y]].cloneNode(true);
