@@ -1,7 +1,7 @@
 (function() {
   var turn;
   // 数字が1or2ならCPU、それ以外の数字にすれば人対人
-  var computer = 3
+  var computer = 2
 
   // x,yに置けるかどうかと裏返すかどうか
   var checkReverse = function(x, y, flip) {
