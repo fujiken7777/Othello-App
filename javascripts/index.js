@@ -111,7 +111,6 @@
         b.appendChild(c);
         // クリックしたら置く処理
         if(board[x][y] == 0) {
-          // クロージャー(戻り値を保持したまま引数に使える関数)
           (function() {
             var _x = x, _y = y;
             c.onclick = function() {
