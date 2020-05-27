@@ -67,6 +67,7 @@
     }
     turn = 3 - turn;
     message += "パス<br>"; + ((turn == 1) ? "黒" : "白") + "の番です";
+    
     for (var x = 1; x <= 8; x++) {
       for (var y = 1; y <= 8; y++) {
         if (board[x][y] == 0 && checkReverse(x, y, false)) {
@@ -97,7 +98,7 @@
   }
 
   var piece;
-  
+
   // boardを表示
   var showBoard = function() {
     var b = document.getElementById("board");
