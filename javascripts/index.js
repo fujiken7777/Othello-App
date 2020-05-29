@@ -10,7 +10,9 @@
     for(var dx = -1; dx <= 1; dx++) {
       for(var dy = -1; dy <= 1; dy++) {
         // 再帰
-        if(dx == 0 && dy == 0) { continue; }
+        if(dx == 0 && dy == 0) { 
+          continue;
+        }
         var nx = x + dx, ny = y + dy, n = 0;
         // 黒なら黒、白なら白で繰り返す
         while(board[nx][ny] == 3 - turn) {
@@ -26,7 +28,7 @@
               board[nx][ny] = turn;
               nx += dx; ny += dy;
             }
-            // 自分の色で置く
+            // 自分の色を置く処理
             board[x][y] = turn;
           }
         }
@@ -114,7 +116,6 @@
           (function() {
             var _x = x, _y = y;
             c.onclick = function() {
-              // 確認後置く処理
               if (checkReverse(_x, _y, true)) {
                 changeTurn();
               }
